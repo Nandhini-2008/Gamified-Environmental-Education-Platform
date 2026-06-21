@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Challenge Quiz</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="quiz-container">
+
+    <h1>🌍 Eco Challenge Quiz</h1>
+
+    <div class="stats">
+
+        <div class="stat-card">
+            ⭐ Score
+            <h2 id="score">0</h2>
+        </div>
+
+        <div class="stat-card">
+            ❤️ Lives
+            <h2 id="lives">3</h2>
+        </div>
+
+        <div class="stat-card">
+            🏆 Level
+            <h2 id="level">1</h2>
+        </div>
+
+        <div class="stat-card">
+            🪙 Coins
+            <h2 id="coins">0</h2>
+        </div>
+
+    </div>
+
+    <div class="xp-box">
+
+        <p>⚡ XP Progress</p>
+
+        <div class="xp-bar">
+            <div id="xp-fill"></div>
+        </div>
+
+        <p id="xp-text">0 / 100 XP</p>
+
+    </div>
+
+    <div class="tree-box">
+
+        <h1 id="tree">🌱</h1>
+
+        <p>Eco Tree Growth</p>
+
+    </div>
+
+    <div class="badge-box">
+
+        <h3 id="badge">
+            🌱 Beginner Explorer
+        </h3>
+
+    </div>
+
+    <div class="timer-box">
+
+        ⏱️ Time Left:
+        <span id="timer">30</span>s
+
+    </div>
+
+    <div class="streak-box">
+
+        🔥 Streak:
+        <span id="streak">0</span>
+
+    </div>
+
+    <div class="progress">
+
+        <div id="progress-fill"></div>
+
+    </div>
+
+    <div class="question-box">
+
+        <h2 id="question">
+            Loading Question...
+        </h2>
+
+        <div id="answers"></div>
+
+    </div>
+
+    <button id="nextBtn" onclick="nextQuestion()">
+        Next Question ➡️
+    </button>
+
+    <div id="achievement" class="achievement">
+        🎉 Achievement Unlocked
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
